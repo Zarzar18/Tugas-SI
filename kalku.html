@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="calc_style.css">
+    <title>Kalkulator Sederhana</title>
+  </head>
+  <body>
+    <h1>Kalkulator Sederhana</h1>
+    <form>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="input1" placeholder="Masukkan angka pertama">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="input2" placeholder="Masukkan angka kedua">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="hasil" placeholder="">
+      </div>
+      <button type="button" class="btn btn-primary" value="+" onclick="tambah()">+</button>
+      <button type="button" class="btn btn-secondary" value="-" onclick="kurang()">-</button>
+      <button type="button" class="btn btn-success" value="x" onclick="kali()">x</button>
+      <button type="button" class="btn btn-danger" value="/" onclick="bagi()">/</button>
+      <button type="button" class="btn btn-warning" value="^" onclick="pangkat()">^</button>
+    </form>
+    <script src="js/calc.js"></script>
+  </body>
+</html>
