@@ -5,8 +5,9 @@
 	padding-top: 50px;
 }
 
-h2 {
+h2,i{
 	margin-bottom: 30px;
+	color: rgb(53, 122, 134);
 }
 
 form {
@@ -17,6 +18,7 @@ form {
 label {
 	display: block;
 	margin-bottom: 10px;
+	color: antiquewhite;
 }
 
 input[type="text"], input[type="password"] {
@@ -24,7 +26,7 @@ input[type="text"], input[type="password"] {
 	padding: 10px;
 	margin-bottom: 20px;
 	box-sizing: border-box;
-	border-radius: 5px;
+	border-radius: 15px;
 	border-color: rgb(21, 214, 188);
 }
 
@@ -39,4 +41,10 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
 	background-color: #45a049;
+}
+
+body{
+	background-image: url(https://wallpaperaccess.com/full/50476.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
