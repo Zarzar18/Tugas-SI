@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <head>
+            <title>Informasi Gempa & Dampaknya</title>
+        </head>
+        <link rel="stylesheet" href="style_gmp.css">
+        <body>
+            <h1>Informasi Gempa & Dampaknya</h1>
+            <table>
+            <tr>
+                <th>Lokasi</th>
+                <th>Skala</th>
+                <th>Dampak</th>
+            </tr>
+            <tbody id="gempa-table"></tbody>
+            </table>
+            <script>
+            class Gempa {
+                constructor(lokasi, skala) {
+                this.lokasi = lokasi;
+                this.skala = skala;
+                }
+
+                dampak() {
+                if (this.skala <= 2) {
+                    return "Gempa tidak terasa";
+                } else if (this.skala > 2 && this.skala <= 4) {
+                    return "Bangunan retak & rusak";
+                } else if (this.skala > 4 && this.skala <= 6) {
+                    return "Bangunan roboh / hancur";
+                } else {
+                    return "Bangunan roboh dan berpotensi tsunami";
+                }
+                }
+            }
+
+            // 8 object Gempa
+            let gempa1 = new Gempa("Palembang", 1.5);
+            let gempa2 = new Gempa("Padang", 3.2);
+            let gempa3 = new Gempa("Bandung", 5.8);
+            let gempa4 = new Gempa("Bengkulu", 2.9);
+            let gempa5 = new Gempa("Surabaya", 4.5);
+            let gempa6 = new Gempa("Makassar", 6.7);
+            let gempa7 = new Gempa("Manado", 7.2);
+            let gempa8 = new Gempa("Bekasi", 8.3);
+
+            let gempas = [gempa1, gempa2, gempa3, gempa4, gempa5, gempa6, gempa7, gempa8];
+
+            let gempaTable = document.getElementById("gempa-table");
+
+            for (let i = 0; i < gempas.length; i++) {
+                let row = gempaTable.insertRow(-1);
+                let lokasiCell = row.insertCell(0);
+                let skalaCell = row.insertCell(1);
+                let dampakCell = row.insertCell(2);
+                lokasiCell.innerHTML = gempas[i].lokasi;
+                skalaCell.innerHTML = gempas[i].skala;
+                dampakCell.innerHTML = gempas[i].dampak();
+            }
+            </script>
+        </body>
+        </html>
